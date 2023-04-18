@@ -13,3 +13,8 @@ buttonElement.addEventListener('click', () => {
   bodyElement.style.backgroundColor = getRandomHexColor();
   spanElement.textContent = bodyElement.style.backgroundColor;
 });
+
+
+
+// 1. ishcenko.github.io/goit-js-hw-06/
+// 2. https://github.com/ishcenko/goit-js-hw-06
