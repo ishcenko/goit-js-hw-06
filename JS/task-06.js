@@ -1,13 +1,6 @@
 const inputElement = document.querySelector('input');
 const inputTextElementLength = inputElement.getAttribute('data-length');
 
-inputElement.addEventListener('click', () => {
-    inputElement.focus();
-});
-
-inputElement.addEventListener('focus', () => {
-    
-});
 
 inputElement.addEventListener('blur', () => {
     if (inputElement.value.length === Number(inputTextElementLength)) {

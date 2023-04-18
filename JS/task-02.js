@@ -7,8 +7,15 @@ const ingredients = [
   'Condiments',
 ];
 
-const ingredientsAll = document.querySelector('#ingredients');
-const ingredientsItem = ingredients.reduce((markup, ingredients) => markup + `<li class='item>${ingredients}</li>`, '');
-ingredientsAll.insertAdjacentHTML('afterbegin', ingredientsItem);
+const ingredientsAll = ingredients.map((ingredient) => {
+  let elIngredients = document.createElement('li');
+  elIngredients.textContent = ingredient;
+  elIngredients.classList.add('item');
+  console.log(elIngredients);
+  return elIngredients
+});
 
 console.log(ingredientsAll);
+const ingredientList = document.querySelector('#ingredients');
+console.log(ingredientList);
+ingredientList.append(...ingredientsAll);

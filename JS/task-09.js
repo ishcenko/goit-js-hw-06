@@ -9,12 +9,10 @@ const bodyElement = document.body;
 const spanElement = document.querySelector('span');
 
 
-buttonElement.addEventListener('click', () => {
-  bodyElement.style.backgroundColor = getRandomHexColor();
-  spanElement.textContent = bodyElement.style.backgroundColor;
-});
+buttonElement.addEventListener('click', clickButtonColor);
 
-
-
-// 1. ishcenko.github.io/goit-js-hw-06/
-// 2. https://github.com/ishcenko/goit-js-hw-06
+function clickButtonColor() {
+  const colorСhange = getRandomHexColor();
+  buttonElement.textContent = colorСhange;
+  bodyElement.style.backgroundColor = colorСhange;
+};

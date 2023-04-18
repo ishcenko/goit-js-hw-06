@@ -1,11 +1,12 @@
 const inputElement = document.querySelector('#font-size-control');
 const spanElementText = document.querySelector('#text');
 
-inputElement.addEventListener('input', incrementFontSize);
 
-function incrementFontSize() {
-    const fontSizeControl = inputElement.value;
+spanElementText.style.fontSize = inputElement.value + 'px';
+console.log(inputElement.value);
 
+inputElement.addEventListener('input', incrementFontSize)
 
-    spanElementText.style.fontSize = `${fontSizeControl}px`;
+function incrementFontSize(e) {
+    spanElementText.style.fontSize = `${e.currentTarget.value}px`;
 };
