@@ -1,14 +1,14 @@
-const inputElement = document.querySelector('input');
-const inputTextElementLength = inputElement.getAttribute('data-length');
+const inputElementForm = document.querySelector('input');
+const inputTextElementLength = inputElementForm.getAttribute('data-length');
 
 
-inputElement.addEventListener('blur', () => {
-    if (inputElement.value.length === Number(inputTextElementLength)) {
+inputElementForm.addEventListener('blur', () => {
+    if (inputElementForm.value.length === Number(inputTextElementLength)) {
         
-        inputElement.classList.add('valid');
-        inputElement.classList.remove('invalid');
+        inputElementForm.classList.add('valid');
+        inputElementForm.classList.remove('invalid');
     } else {
-        inputElement.classList.add('invalid');
-        inputElement.classList.remove('valid');
+        inputElementForm.classList.add('invalid');
+        inputElementForm.classList.remove('valid');
     }
 });
